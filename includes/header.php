@@ -31,10 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>Aplicación de citas médicas UCE</title>
 
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-plus" viewBox="0 0 16 16">
-  <path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z"/>
-  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-</svg>
+  
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -100,6 +97,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
          
+
+
+               
           <li class="nav-item">
             <a href="panel.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
@@ -109,33 +109,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="lista_notas.php" class="nav-link">
-            <i class="nav-icon fas fa-file-invoice-dollar"></i>
-              
-              <p>
-                Facturas    
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="join.php" class="nav-link">
-            <i class="nav-icon fas fa-user-cog"></i>
-              
-             
-              <p>
-                Lista de Doctores y costos    
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="agendas.php" class="nav-link">
-              <i class="nav-icon fas fa-user-cog"></i>
-              <p>
-                Agendamientos   
-              </p>
-            </a>
-          </li>
+
           <?php if(isset($_SESSION['activo']) && $_SESSION['esAdmin'] == 1) : ?>
             <li class="nav-item">
               <a href="lista_usuarios.php" class="nav-link">
@@ -146,6 +120,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
             </li>
             <?php endif; ?>
+
+
+
+            <li class="nav-item">
+            <a href="agendas.php" class="nav-link">
+              <i class="nav-icon fas fa-user-cog"></i>
+              <p>
+                Agendamientos   
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="lista_notas.php" class="nav-link">
+            <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              
+              <p>
+                Facturas    
+              </p>
+            </a>
+          </li>
+
+
+
+
+          <li class="nav-item">
+            <a href="join.php" class="nav-link">
+            <i class="nav-icon fas fa-user-cog"></i>
+              <p>
+                Lista de Doctores y costos    
+              </p>
+            </a>
+          </li>
+
+
             
           <li class="nav-item">
             <a href="salir.php" class="nav-link">

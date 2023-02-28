@@ -82,7 +82,7 @@ if (isset($_POST["crearUsuario"])){
         
 <?php  
 
-//Mostrar registros
+//Generador de numero de factura 
 $query = "SELECT TOP 1(NUM_FACTURA) AS ULTIMO
 from FACTURA
 ORDER BY NUM_FACTURA DESC";
@@ -92,7 +92,6 @@ $Nidcita = $stmt->fetchAll(PDO::FETCH_OBJ);
 //var_dump($registros);
 
 ?>
-
              <?php foreach($Nidcita as $fila) : ?>
 
                       <?php 
@@ -103,7 +102,6 @@ $Nidcita = $stmt->fetchAll(PDO::FETCH_OBJ);
                   <?php endforeach; ?>
  
             <!-- /.card-body -->
-
 
             <div class="card-header">               
               <div class="row">
@@ -142,7 +140,7 @@ $Nidcita = $stmt->fetchAll(PDO::FETCH_OBJ);
                     </div>   
 
 
-                          <button  type="submit"  name="crearUsuario" class="btn btn-primary"><i class="fas fa-cog"></i> Agendar Cita</button> 
+                          <button  type="submit"  name="crearUsuario" class="btn btn-primary"><i class="fas fa-cog"></i> Generar Factura</button> 
                          
                         
                       </div>

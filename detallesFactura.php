@@ -42,7 +42,7 @@
 
          <div class="mb-3">
              <label for="ID_CITA" class="form-label">Nombre del paciente:</label>
-            <input type="text" readonly  name="ID_CITA" class="form-control" value="<?php  echo $fila->NOMBRE_PACIENTE; ?>">
+            <input type="text" readonly  name="ID_CITA" class="form-control" value="<?php  echo  $fila->NOMBRE_PACIENTE; ?>">
         </div>
         <div class="mb-3">
              <label for="ID_CITA" class="form-label">Apellido del paciente:</label>

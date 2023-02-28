@@ -50,6 +50,43 @@ if(isset($_POST["crearUsuario"])){
 ?>
 
 
+<?php  
+
+//Generador de numero de factura 
+$query = "SELECT TOP 1 SUBSTRING((NUM_HISTORIA),3,4) AS ULTIMO
+FROM PACIENTE
+ORDER BY NUM_HISTORIA DESC";
+$stmt = $conn->query($query);
+$Nhistoria = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+//var_dump($registros);
+
+?>
+             <?php foreach($Nhistoria as $fila) : ?>
+
+                      <?php 
+
+                      $nuevoValorH =$fila->ULTIMO+1;
+                           ?>
+
+                  <?php endforeach; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="row">
     <div class="col-sm-12">
             <?php if(isset($mensaje)) : ?>
@@ -93,7 +130,7 @@ if(isset($_POST["crearUsuario"])){
 
                       <div class="mb-3">
                         <label for="NUM_HISTORIA" class="form-label">Numero_Historia:</label>
-                        <input type="text" name="NUM_HISTORIA" class="form-control"  >
+                        <input type="text" name="NUM_HISTORIA" class="form-control" value="<?php  echo "CM0".$nuevoValorH; ?>" >
                       </div>
 
                       

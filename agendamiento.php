@@ -124,7 +124,7 @@ $Nidcita = $stmt->fetchAll(PDO::FETCH_OBJ);
                 <form role="form" method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">            
 
 
-                <div class="mb-3">
+                    <div class="mb-3">
                       <label for="ID_CITA" class="form-label">Id de la cita:</label>
                       <input type="text" readonly  name="ID_CITA" class="form-control" value="<?php  echo $nuevoValor; ?>">
                     </div>

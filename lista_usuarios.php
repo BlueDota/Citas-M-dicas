@@ -14,6 +14,7 @@
   //var_dump($registros);
 
 ?>
+
               <div class="card-header">               
                 <div class="row">
                   <div class="col-md-9">
@@ -27,6 +28,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+                
                 <table id="tblUsuarios" class="table table-bordered table-striped">
                   
                 <thead>
@@ -50,7 +52,13 @@
                 <?php foreach($usuarios as $fila) : ?>
                    <tr>
                           <td><?php echo $fila->NUM_HISTORIA; ?></td>
-                          <td><?php echo $fila->NOM_NACIONALIDAD; ?></td>
+                          <td><?php $nacionalidadM =  $fila->NOM_NACIONALIDAD;
+                          
+                          $nacionalidadM = ucfirst(strtolower($nacionalidadM));
+                          echo $nacionalidadM;
+                          
+                          ?></td>
+                        
                           <td><?php echo $fila->CED_PASAPORTE; ?></td>
                           <td><?php echo $fila->NOMBRE_PACIENTE; ?></td>
                           <td><?php echo $fila->APELLIDO_PACIENTE; ?></td>
